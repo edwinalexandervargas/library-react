@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Book from "../components/ui/Book";
 
 const Books = ({ books: initalBooks }) => {
-  console.log("Books rendered, received:", initalBooks)
   const [books, setBooks] = useState(initalBooks);
 
   function filterBooks(filter) {
