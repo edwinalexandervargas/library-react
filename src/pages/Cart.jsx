@@ -57,11 +57,9 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                           max={99}
                           className="cart__input"
                           value={book.quantity}
-                          onChange={(event) => {
-                            const value = parseInt(event.target.value);
-                            if (isNaN(value)) return; 
-                            changeQuantity(book, value);
-                          }}
+                          onChange={(event) =>
+                            changeQuantity(book, +event.target.value)
+                          }
                         />
                       </div>
                       <div className="cart__total">
