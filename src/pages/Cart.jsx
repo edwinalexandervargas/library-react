@@ -58,9 +58,9 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                           className="cart__input"
                           value={book.quantity}
                           onChange={(event) => {
-                            const value = event.target.value;
-                            if (value === "") return;
-                            changeQuantity(book, +value);
+                            const value = parseInt(event.target.value);
+                            if (isNaN(value)) return; 
+                            changeQuantity(book, value);
                           }}
                         />
                       </div>
